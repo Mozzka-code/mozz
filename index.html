@@ -1,62 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<head>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+        <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linktree Clone</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
-      rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>Linktree clone</title>
-  </head>
-  <body>
-    <div class="container">
-       <a  href="" class="sha">
-        <ion-icon class="" name="share-line"></ion-icon>
-       </a>
-       <div class="img-container">
-        <img class="img" src="profile.jpg" alt="profile picture">
-       </div>
-       <h1>Mozzka</h1>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      <a href="https://www.instagram.com/nowmeeee__" class="link-card">
-        <ion-icon class="icons" name="logo-instagram"></ion-icon>
-        <p>Instagram</p>
-        <ion-icon  class="icons" name="share-outline"></ion-icon>
-      </a>
-      <a href="https://www.tiktok.com/@mozzkaa" class="link-card">
-        <ion-icon class="icons" name="logo-tiktok"></ion-icon>
-        <p>TikTok</p>
-        <ion-icon  class="icons" name="share-outline"></ion-icon>
-      </a>
-      <a href="https://wa.me/+62895329840500?text=Save bro" class="link-card">
-        <ion-icon class="icons" name="logo-whatsapp"></ion-icon>
-        <p>WhatsApp</p>
-        <ion-icon  class="icons" name="share-outline"></ion-icon>
-      </a>
-     
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to right, #000000, #1a1a2e, #16213e);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 90%; /* Menjaga ukuran responsif */
+            width: 400px; /* Ukuran kotak lebih besar */
+            padding: 30px; /* Padding lebih besar untuk ruang tambahan */
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .img-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #00aaff;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin: 10px 0;
+            color: #00aaff;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 8px 0;
+            transition: background 0.3s;
+        }
+
+        .link-card:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .icon {
+            font-size: 1.5rem;
+            color: #00aaff;
+            margin-right: 10px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 600px) {
+            .img {
+                width: 80px;
+                height: 80px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .link-card {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .img {
+                width: 90px;
+                height: 90px;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            .link-card {
+                font-size: 1rem;
+                padding: 11px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="img-container">
+            <img src="profile.jpg" alt="Profile Picture" class="img" />
+        </div>
+        <h1>Mozzka</h1>
+        <a href="https://www.instagram.com/nowmeeee__" class="link-card">
+            <ion-icon name="logo-instagram" class="icon"></ion-icon>
+            <p>Instagram</p>
+        </a>
+        <a href="https://www.tiktok.com/@mozzkaa" class="link-card">
+            <ion-icon name="logo-tiktok" class="icon"></ion-icon>
+            <p>TikTok</p>
+        </a>
+        <a href="https://wa.me/+62895329840500?text=Save%20bro" class="link-card">
+            <ion-icon name="logo-whatsapp" class="icon"></ion-icon>
+            <p>WhatsApp</p>
+        </a>
+        <a href="https://github.com/Mozzka-code" class="link-card">
+            <ion-icon name="logo-github" class="icon"></ion-icon>
+            <p>GitHub</p>
+        </a>
     </div>
 
-
-
-
-
-
-
-
-    <script src="script.js" ></script>
     <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        type="module"
     ></script>
     <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        nomodule
     ></script>
-  </body>
+</body>
 </html>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
